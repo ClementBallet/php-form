@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+</head>
+<body>
+    <h1>Les formulaires en PHP</h1>
+    <!-- Traitement du formulaire en POST (les données sont invisibles et passées dans l'en-tête HTTP) -->
+    <form action="traitement-post.php" method="post"> <!-- Si on veut traiter sur la même page php où est le formulaire, on peut se servir de la variable $_SERVER["PHP_SELF"] qui renvoie la page courante -->
+        <h2>Méthode POST</h2>
+        <p>Votre nom : <input type="text" name="nom" id=""></p>
+        <p>
+            Votre niveau en PHP :
+            Débutant : <input type="radio" name="niveau" value="débutant" id="">
+            Confirmé : <input type="radio" name="niveau" value="confirmé" id="">
+            Expert : <input type="radio" name="niveau" value="expert" id="">
+        </p>
+
+        <input type="submit" value="Valider !">
+    </form>
+
+    <!-- Traitement du formulaire en GET (les données sont visibles dans l'url) -->
+    <form action="traitement-get.php" method="get">
+        <h2>Méthode GET</h2>
+        <input type="text" name="nom" id="">
+        <input type="submit" value="Valider !">
+    </form>
+</body>
+</html>
